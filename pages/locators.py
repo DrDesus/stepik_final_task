@@ -1,8 +1,12 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators:
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+
+
+class MainPageLocators:
+    pass
 
 
 class LoginPageLocators:
@@ -16,3 +20,4 @@ class ProductPageLocators:
     PRICE_PRODUCT_IN_ALERT = (By.CSS_SELECTOR, '.fade.in:last-child strong')
     NAME_PRODUCT = (By.CSS_SELECTOR, '.product_main h1')
     NAME_PRODUCT_IN_ALERT = (By.CSS_SELECTOR, '.fade.in:first-child strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert-success:first-child')

@@ -17,4 +17,10 @@ class ProductPage(BasePage):
         assert self.get_text_of_element(*ProductPageLocators.PRICE_PRODUCT) == \
                self.get_text_of_element(*ProductPageLocators.PRICE_PRODUCT_IN_ALERT), 'Price product not match'
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def is_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is not disappeared"
 
