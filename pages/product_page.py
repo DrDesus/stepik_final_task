@@ -5,7 +5,6 @@ from .locators import ProductPageLocators
 class ProductPage(BasePage):
     def add_product_to_cart(self):
         self.click_on_button(*ProductPageLocators.ADD_TO_CART)
-        self.solve_quiz_and_get_code()
         self.does_the_price_match()
         self.does_the_name_match()
 
